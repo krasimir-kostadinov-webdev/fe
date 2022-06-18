@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Navigation from "./components/Layout/Navigation/Navigation";
+import AccountPage from "./components/pages/Account/AccountPage";
+import Home from "./components/pages/Home/Home";
+import Register from "./components/pages/Register/Register";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+type Props = {
+   isLoggedIn: boolean;
+};
+
+const App: React.FC<Props> = ({ isLoggedIn }) => {
+   return (
+      <>
+         <div>
+            <Navigation />
+            <div className="wrapper">
+               <Routes>
+                  <Route path="/" element={<Home isLoggedIn={isLoggedIn} />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/account" element={<AccountPage />} />
+               </Routes>
+            </div>
+         </div>
+      </>
+   );
+};
 
 export default App;
