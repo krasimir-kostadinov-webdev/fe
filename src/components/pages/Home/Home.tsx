@@ -1,14 +1,11 @@
 import React from "react";
 
-type Props = {
-   isLoggedIn: boolean;
-};
+type Props = {};
 
-const Home: React.FC<Props> = ({ isLoggedIn }) => {
+const Home: React.FC<Props> = () => {
    return (
       <div>
          <h2>Home page</h2>
-         {isLoggedIn && <h3>I'm currently loggedIn</h3>}
          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             laudantium culpa autem. Lorem, ipsum dolor sit amet consectetur
