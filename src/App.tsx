@@ -8,6 +8,11 @@ import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 type Props = {
    isLoggedIn: boolean;
 };
+/**
+ * 1. check validation with Yup
+ *    cast() validate()
+ * 2. use formik
+ */
 
 const App: React.FC<Props> = ({ isLoggedIn }) => {
    return (

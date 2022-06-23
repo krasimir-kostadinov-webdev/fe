@@ -24,3 +24,10 @@ code {
 .wrapper {
    padding: 1em;
 }
+
+.field-error {
+   background-color: hsl(0, 86%, 37%);
+   color: hsl(0, 86%, 52%);
+   font-size: 11px;
+   padding: 0.2em;
+}
